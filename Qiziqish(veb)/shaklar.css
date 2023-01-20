@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    color: #f7f7f7;
+    text-align: center;
+}
+
+.box {
+    padding: 20px 20px 20px 20px;
+}
+
+.kvadrat {
+    width: 200px;
+    height: 200px;
+    background-color: rebeccapurple;
+}
+
+.uchburchak {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid rgb(236, 5, 74);
+}
+
+.doira {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(242, 255, 0);
+}

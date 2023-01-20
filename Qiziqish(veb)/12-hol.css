@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(#555, #292929);
+}
+
+label {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background: #3e3e3e;
+    box-shadow: 0 0 0 4px #303030;
+    border-radius: 75px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label input {
+    appearance: none;
+}
+
+label span {
+    position: absolute;
+    left: 0;
+    width: 175px;
+    height: 150px;
+    background: url(./Coffee_01.png);
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+    transition: 1.5s;
+    transform: rotate(-180deg);
+    transform-origin: 75px;
+}
+
+label input:checked ~ span {
+    left: 150px;
+    background: url(./Coffee_02.png);
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+    transform: rotate(360deg);
+}
+
+label text {
+    position: absolute;
+    left: -120px;
+    font-family: consolas;
+    color: #fff;
+    font-size: 3em;
+    filter: drop-shadow(0 0 15px #fff)
+    drop-shadow(0 0 35px #fff);
+    transition: 1.5s;
+}
+
+label input:checked ~ text {
+    color: #8f8f8f;
+    filter: none;
+}
+
+label text:last-child {
+    position: absolute;
+    left: initial;
+    right: -100px;
+    color: #8f8f8f;
+    filter: none;
+}
+
+label input:checked ~ text:last-child {
+    color: #fff;
+    filter: drop-shadow(0 0 15px #fff)
+    drop-shadow(0 0 35px #fff);
+}

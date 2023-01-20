@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #006bc0, #1ecafc);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    position: absolute;
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.loader {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.25);
+    filter: url(#Gooey);
+}
+
+.loader span {
+    position: absolute;
+    left: 0;
+    transform-origin: 150px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 5s ease-in-out infinite;
+    animation-delay: calc(0.15s * var(--i));
+}
+
+@keyframes animate {
+    0%,10% {
+        width: 100px;
+        height: 100px;
+        transform: rotate(0deg) translateX(120px);
+    }
+    40%,70% {
+        width: 40px;
+        height: 40px;
+        transform: rotate(calc(360deg / 8 * var(--i)));
+        box-shadow: 0 0 0 10px #fff;
+    }
+    90%,100% {
+        width: 100px;
+        height: 100px;
+        transform: rotate(0deg) translateX(120px);
+    }
+}
+svg {
+    width: 0;
+    height: 0;
+}
